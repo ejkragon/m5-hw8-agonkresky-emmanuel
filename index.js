@@ -65,13 +65,21 @@ var ranNum = math.floor(math.random() * 4);
 // determine if the box clicked is equal to the random number
 // if the numbers match, display a winning message by changing the text content of the div#message element
 // if the numbers match, increment wins and display the win count in div#wins
+ 
+var winsP = document.createElement('p')
+winsP.textContent = "WINS:"
+document.querySelector('#wins').appendChild(newP)
 
+var lossesP = document.createElement('p')
+winsP.textContent = "LOSSES:"
+document.querySelector('#loses').appendChild(newP)
 
 if (ranNum = box1) {
     document.getElementById("message").innerHTML = "Congratulations, you won! Care to see if you can do it again?"
+    wins = wins += 1
 } else {
-
-
+    document.getElementById("message").innerHTML = losingMessages[ranNum]
+    losses = losses += 1
 }
 
 
