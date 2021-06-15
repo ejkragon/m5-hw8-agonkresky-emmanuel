@@ -6,61 +6,74 @@ var losingMessages = [
 ]
 
 // Create variables to count wins and losses
-var numWins = "wins"
-var numLosses = "losses"
+var trackWins = 0
+var trackLosses = 0
 
 // Create variables that target elements with the following IDs: 'message', 'wins', 'losses'
-var message = document.getElementById("message")
-var wins = document.getElementById("wins")
-var losses = document.getElementById("losses")
+var trgtMessage = document.getElementById("message")
+var trgtWins = document.getElementById("wins")
+var trgtLosses = document.getElementById("losses")
 
 // target all .box elements and attach a click event listener to each one using a loop
-var bxs = document.querySelectorAll('.boxes > box')
+ var trgtBox = document.querySelectorAll('.boxes > box')
 
 function clickHandler(event) {
     console.log(event.target.textContent)
 }
-
-for (let i=0; i < bxs.length; i++) {
-    var box = bxs[i]
+ 
+for (var i=0; i < trgtBox.length; i++) {
+    var box = trgtBox[i]
     box.onclick = clickHandler
 }
-
 
 
 // within each click event...
 // determine which box was clicked with 'this.textContent' or event.target.textContent
 // convert that value to a Number and store it to a variable
-bxs.forEach(function(box) {
-    box.onclick = clickHandler
-})
 
-var box1 = document.getElementById("box-1")
+var box1 = document.getElementById("box-1").value
+var box = parseInt(box1, 1)
+// console.log(1);
 
-for (let i=0; i < box1.length; i++) {
-    var box1 = bxs[i]
-    box1.onclick = clickHandler
-}
+var box2 = document.getElementById("box-2").value
+var box = parseInt(box2, 2)
+// console.log(2);
 
-var box2 = document.getElementById("box-2")
+var box3 = document.getElementById("box-3").value
+var box = parseInt(box3, 3)
+// console.log(3);
 
-for (let i=0; i < box2.length; i++) {
-    var box2 = bxs[i]
-    box2.onclick = clickHandler
-}
 
-var box3 = document.getElementById("box-3")
-
-for (let i=0; i < box3.length; i++) {
-    var box3 = bxs[i]
-    box3.onclick = clickHandler
-}
+// bxs.forEach(function(box) {
+    // box.onclick = clickHandler
+// })
+// 
+// var box1 = document.getElementById("box-1")
+// 
+// for (let i=0; i < box1.length; i++) {
+    // var box1 = bxs[i]
+    // box1.onclick = clickHandler
+// }
+// 
+// var box2 = document.getElementById("box-2")
+// 
+// for (let i=0; i < box2.length; i++) {
+    // var box2 = bxs[i]
+    // box2.onclick = clickHandler
+// }
+// 
+// var box3 = document.getElementById("box-3")
+// 
+// for (let i=0; i < box3.length; i++) {
+    // var box3 = bxs[i]
+    // box3.onclick = clickHandler
+// }
 
 
 // create a random number between 1-3 and store it to a variable
 // This number will represent the winning box
 
-var ranNum = math.floor(math.random() * 4);
+var ranBox = Math.floor(Math.random() * 3)
 
 // determine if the box clicked is equal to the random number
 // if the numbers match, display a winning message by changing the text content of the div#message element
@@ -68,18 +81,20 @@ var ranNum = math.floor(math.random() * 4);
  
 var winsP = document.createElement('p')
 winsP.textContent = "WINS:"
-document.querySelector('#wins').appendChild(newP)
+document.querySelector('#wins').appendChild(winsP)
+document.getElementById("winsP").innerHTML = trackWins
 
 var lossesP = document.createElement('p')
-winsP.textContent = "LOSSES:"
-document.querySelector('#loses').appendChild(newP)
+lossesP.textContent = "LOSSES:"
+document.querySelector('#losses').appendChild(lossesP)
+document.getElementById("lossesP").innerHTML = trackLosses
 
-if (ranNum = box1) {
+if (ranBox = box1) {
     document.getElementById("message").innerHTML = "Congratulations, you won! Care to see if you can do it again?"
-    wins = wins += 1
+    trackWins += 1
 } else {
     document.getElementById("message").innerHTML = losingMessages[ranNum]
-    losses = losses += 1
+    trackLosses += 1
 }
 
 
