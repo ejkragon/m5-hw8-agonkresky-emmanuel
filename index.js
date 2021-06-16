@@ -15,87 +15,146 @@ var trgtWins = document.getElementById("wins")
 var trgtLosses = document.getElementById("losses")
 
 // target all .box elements and attach a click event listener to each one using a loop
- var trgtBox = document.querySelectorAll('.boxes > box')
+var trgtBox1 = document.querySelector("box-1")
 
 function clickHandler(event) {
     console.log(event.target.textContent)
 }
- 
-for (var i=0; i < trgtBox.length; i++) {
-    var box = trgtBox[i]
-    box.onclick = clickHandler
+for (var i=0; i < trgtBox1.length; i++) {
+    var box1 = trgtBox1[i]
+    box1.onclick = clickHandler
 }
+var box1 = parseInt(box1, 1)
+console.log(1)
 
+
+var trgtBox2 = document.querySelector("box-2")
+function clickHandler(event) {
+    console.log(event.target.textContent)
+}
+for (var i = 0; i < trgtBox2.length; i++) {
+    var box2 = trgtBox2[i]
+    box2.onclick = clickHandler
+}
+var box2 = parseInt(box2, 2)
+console.log(2)
+
+
+var trgtBox3 = document.querySelector("box-3")
+function clickHandler(event) {
+    console.log(event.target.textContent)
+}
+for (var i = 0; i < trgtBox3.length; i++) {
+    var box3 = trgtBox3[i]
+    box3.onclick = clickHandler
+}
+var box3 = parseInt(box3, 3)
+console.log(3);
 
 // within each click event...
 // determine which box was clicked with 'this.textContent' or event.target.textContent
 // convert that value to a Number and store it to a variable
 
-var box1 = document.getElementById("box-1").value
-var box = parseInt(box1, 1)
-// console.log(1);
-
-var box2 = document.getElementById("box-2").value
-var box = parseInt(box2, 2)
-// console.log(2);
-
-var box3 = document.getElementById("box-3").value
-var box = parseInt(box3, 3)
-// console.log(3);
-
-
-// bxs.forEach(function(box) {
-    // box.onclick = clickHandler
-// })
-// 
-// var box1 = document.getElementById("box-1")
-// 
-// for (let i=0; i < box1.length; i++) {
-    // var box1 = bxs[i]
-    // box1.onclick = clickHandler
-// }
-// 
-// var box2 = document.getElementById("box-2")
-// 
-// for (let i=0; i < box2.length; i++) {
-    // var box2 = bxs[i]
-    // box2.onclick = clickHandler
-// }
-// 
-// var box3 = document.getElementById("box-3")
-// 
-// for (let i=0; i < box3.length; i++) {
-    // var box3 = bxs[i]
-    // box3.onclick = clickHandler
-// }
+        // var targetBox1 = document.getElementById("box-1").value
+        // var box1 = parseInt(box1, 1)
+        // console.log(1);
+        // 
+        // var targetBox2 = document.getElementById("box-2").value
+        // var box2 = parseInt(box2, 2)
+        // console.log(2);
+        // 
+        // var targetBox3 = document.getElementById("box-3").value
+        // var box3 = parseInt(box3, 3)
+        // console.log(3);
 
 
-// create a random number between 1-3 and store it to a variable
-// This number will represent the winning box
+        // bxs.forEach(function(box) {
+            // box.onclick = clickHandler
+        // })
+        // 
+        // var box1 = document.getElementById("box-1")
+        // 
+        // for (let i=0; i < box1.length; i++) {
+            // var box1 = bxs[i]
+            // box1.onclick = clickHandler
+        // }
+        // 
+        // var box2 = document.getElementById("box-2")
+        // 
+        // for (let i=0; i < box2.length; i++) {
+            // var box2 = bxs[i]
+            // box2.onclick = clickHandler
+        // }
+        // 
+        // var box3 = document.getElementById("box-3")
+        // 
+        // for (let i=0; i < box3.length; i++) {
+            // var box3 = bxs[i]
+            // box3.onclick = clickHandler
+        // }
 
-var ranBox = Math.floor(Math.random() * 3)
+
+        // create a random number between 1-3 and store it to a variable
+        // This number will represent the winning box
+
+winningBox = Math.floor((Math.random() * 3) + 1)
+function logBox() {
+    console.log(winningBox)
+}
+logBox()
+var winningBox
 
 // determine if the box clicked is equal to the random number
 // if the numbers match, display a winning message by changing the text content of the div#message element
 // if the numbers match, increment wins and display the win count in div#wins
- 
-var winsP = document.createElement('p')
-winsP.textContent = "WINS:"
-document.querySelector('#wins').appendChild(winsP)
-document.getElementById("winsP").innerHTML = trackWins
 
-var lossesP = document.createElement('p')
-lossesP.textContent = "LOSSES:"
-document.querySelector('#losses').appendChild(lossesP)
-document.getElementById("lossesP").innerHTML = trackLosses
-
-if (ranBox = box1) {
-    document.getElementById("message").innerHTML = "Congratulations, you won! Care to see if you can do it again?"
+if (winningBox = box1) {
+    document.getElementById("message").innerHTML = "Congratulations, you won!"
     trackWins += 1
 } else {
-    document.getElementById("message").innerHTML = losingMessages[ranNum]
+    document.getElementById("message").innerHTML = losingMessages[random_interger]
     trackLosses += 1
 }
+
+if (ranBox = box2) {
+    document.getElementById("message").innerHTML = "Congratulations, you won!"
+    trackWins += 1
+} else {
+    document.getElementById("message").innerHTML = losingMessages
+    [random_interger]
+    trackLosses += 1
+}
+
+if (ranBox = box3) {
+    document.getElementById("message").innerHTML = "Congratulations, you won!"
+    trackWins += 1
+} else {
+    document.getElementById("message").innerHTML = losingMessages
+    [random_interger]
+    trackLosses += 1
+}
+
+
+var winsP = document.getElementById("wins")
+document.createElement("winsP")
+winsP.textContent = "WINS:"
+document.querySelector("#wins").appendChild(winsP)
+document.getElementById("winsP").appendChild(trgtkWins)
+document.getElementById("trgtWins").innerHTML = trackWins
+
+
+var lossesP = document.getElementById("losses")
+document.createElement("lossesP")
+lossesP.textContent = "LOSSES:"
+document.querySelector("#losses").appendChild(lossesP)
+document.getElementById("lossesP").appendChild(trgtLosses)
+document.getElementById("trgtLosses").innerHTML = trackLosses
+
+
+
+
+
+
 
 
 // if the numbers don't match, change the div#message element's text to a random losing message from the array above
