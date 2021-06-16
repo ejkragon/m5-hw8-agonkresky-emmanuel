@@ -15,41 +15,92 @@ var trgtWins = document.getElementById("wins")
 var trgtLosses = document.getElementById("losses")
 
 // target all .box elements and attach a click event listener to each one using a loop
-var trgtBox1 = document.querySelector("box-1")
+
+var clickBox = document.querySelectorAll(".boxes > .row > div.box")
+
+// from Lee's slack msg:
+// // [line above] to target all of your boxes to then loop through and attach handlers
 
 function clickHandler(event) {
     console.log(event.target.textContent)
 }
-for (var i=0; i < trgtBox1.length; i++) {
-    var box1 = trgtBox1[i]
-    box1.onclick = clickHandler
-}
-var box1 = parseInt(box1, 1)
-console.log(1)
 
+for (var i = 0; i < clickBox.length; i++) {
+    var box = clickBox[i];
+    box.onclick = clickHandler 
+}
 
-var trgtBox2 = document.querySelector("box-2")
-function clickHandler(event) {
-    console.log(event.target.textContent)
-}
-for (var i = 0; i < trgtBox2.length; i++) {
-    var box2 = trgtBox2[i]
-    box2.onclick = clickHandler
-}
-var box2 = parseInt(box2, 2)
-console.log(2)
+// var trgtBox1 = document.querySelector(".box-1")
+// 
+// function clickHandler(event) {
+    // console.log(event.target.textContent)
+// }
+// for (var i = 0; i < trgtBox1.length; i++) {
+    // var box1 = trgtBox1[i]
+    // box1.onclick = clickHandler
+// }
+// var box1 = parseInt(box1, 1)
+// console.log(1)
+// 
+// 
+// var trgtBox2 = document.querySelector(".box-2")
+// function clickHandler(event) {
+    // console.log(event.target.textContent)
+// }
+// for (var i = 0; i < trgtBox2.length; i++) {
+    // var box2 = trgtBox2[i]
+    // box2.onclick = clickHandler
+// }
+// var box2 = parseInt(box2, 2)
+// console.log(2)
+// 
+// 
+// var trgtBox3 = document.querySelector(".box-3")
+// function clickHandler(event) {
+    // console.log(event.target.textContent)
+// }
+// for (var i = 0; i < trgtBox3.length; i++) {
+    // var box3 = trgtBox3[i]
+    // box3.onclick = clickHandler
+// }
+// var box3 = parseInt(box3, 3)
+// console.log(3);
 
-
-var trgtBox3 = document.querySelector("box-3")
-function clickHandler(event) {
-    console.log(event.target.textContent)
-}
-for (var i = 0; i < trgtBox3.length; i++) {
-    var box3 = trgtBox3[i]
-    box3.onclick = clickHandler
-}
-var box3 = parseInt(box3, 3)
-console.log(3);
+// var trgtBox1 = document.querySelector("box-1")
+// 
+// function clickHandler(event) {
+    // console.log(event.target.textContent)
+// }
+// for (var i=0; i < trgtBox1.length; i++) {
+    // var box1 = trgtBox1[i]
+    // box1.onclick = clickHandler
+// }
+// var box1 = parseInt(box1, 1)
+// console.log(1)
+// 
+// 
+// var trgtBox2 = document.querySelector("box-2")
+// function clickHandler(event) {
+    // console.log(event.target.textContent)
+// }
+// for (var i = 0; i < trgtBox2.length; i++) {
+    // var box2 = trgtBox2[i]
+    // box2.onclick = clickHandler
+// }
+// var box2 = parseInt(box2, 2)
+// console.log(2)
+// 
+// 
+// var trgtBox3 = document.querySelector("box-3")
+// function clickHandler(event) {
+    // console.log(event.target.textContent)
+// }
+// for (var i = 0; i < trgtBox3.length; i++) {
+    // var box3 = trgtBox3[i]
+    // box3.onclick = clickHandler
+// }
+// var box3 = parseInt(box3, 3)
+// console.log(3);
 
 // within each click event...
 // determine which box was clicked with 'this.textContent' or event.target.textContent
