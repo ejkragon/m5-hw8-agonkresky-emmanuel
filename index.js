@@ -26,97 +26,124 @@ function clickHandler(event) {
 }
 
 for (var i = 0; i < clickBox.length; i++) {
-    var box = clickBox[i];
+    var box = clickBox[i]
     box.onclick = clickHandler 
 }
 
-// var trgtBox1 = document.querySelector(".box-1")
-// 
-// function clickHandler(event) {
-    // console.log(event.target.textContent)
-// }
-// for (var i = 0; i < trgtBox1.length; i++) {
-    // var box1 = trgtBox1[i]
-    // box1.onclick = clickHandler
-// }
-// var box1 = parseInt(box1, 1)
-// console.log(1)
-// 
-// 
-// var trgtBox2 = document.querySelector(".box-2")
-// function clickHandler(event) {
-    // console.log(event.target.textContent)
-// }
-// for (var i = 0; i < trgtBox2.length; i++) {
-    // var box2 = trgtBox2[i]
-    // box2.onclick = clickHandler
-// }
-// var box2 = parseInt(box2, 2)
-// console.log(2)
-// 
-// 
-// var trgtBox3 = document.querySelector(".box-3")
-// function clickHandler(event) {
-    // console.log(event.target.textContent)
-// }
-// for (var i = 0; i < trgtBox3.length; i++) {
-    // var box3 = trgtBox3[i]
-    // box3.onclick = clickHandler
-// }
-// var box3 = parseInt(box3, 3)
-// console.log(3);
+        // var trgtBox1 = document.querySelector(".box-1")
+        // 
+        // function clickHandler(event) {
+            // console.log(event.target.textContent)
+        // }
+        // for (var i = 0; i < trgtBox1.length; i++) {
+            // var box1 = trgtBox1[i]
+            // box1.onclick = clickHandler
+        // }
+        // var box1 = parseInt(box1, 1)
+        // console.log(1)
+        // 
+        // 
+        // var trgtBox2 = document.querySelector(".box-2")
+        // function clickHandler(event) {
+            // console.log(event.target.textContent)
+        // }
+        // for (var i = 0; i < trgtBox2.length; i++) {
+            // var box2 = trgtBox2[i]
+            // box2.onclick = clickHandler
+        // }
+        // var box2 = parseInt(box2, 2)
+        // console.log(2)
+        // 
+        // 
+        // var trgtBox3 = document.querySelector(".box-3")
+        // function clickHandler(event) {
+            // console.log(event.target.textContent)
+        // }
+        // for (var i = 0; i < trgtBox3.length; i++) {
+            // var box3 = trgtBox3[i]
+            // box3.onclick = clickHandler
+        // }
+        // var box3 = parseInt(box3, 3)
+        // console.log(3);
 
-// var trgtBox1 = document.querySelector("box-1")
-// 
+        // var trgtBox1 = document.querySelector("box-1")
+        // 
+        // function clickHandler(event) {
+            // console.log(event.target.textContent)
+        // }
+        // for (var i=0; i < trgtBox1.length; i++) {
+            // var box1 = trgtBox1[i]
+            // box1.onclick = clickHandler
+        // }
+        // var box1 = parseInt(box1, 1)
+        // console.log(1)
+        // 
+        // 
+        // var trgtBox2 = document.querySelector("box-2")
+        // function clickHandler(event) {
+            // console.log(event.target.textContent)
+        // }
+        // for (var i = 0; i < trgtBox2.length; i++) {
+            // var box2 = trgtBox2[i]
+            // box2.onclick = clickHandler
+        // }
+        // var box2 = parseInt(box2, 2)
+        // console.log(2)
+        // 
+        // 
+        // var trgtBox3 = document.querySelector("box-3")
+        // function clickHandler(event) {
+            // console.log(event.target.textContent)
+        // }
+        // for (var i = 0; i < trgtBox3.length; i++) {
+            // var box3 = trgtBox3[i]
+            // box3.onclick = clickHandler
+        // }
+        // var box3 = parseInt(box3, 3)
+        // console.log(3);
+
+// var trgtBox = document.querySelector(".box-1")
 // function clickHandler(event) {
     // console.log(event.target.textContent)
+    // var trgtBox = parseInt(1)
 // }
-// for (var i=0; i < trgtBox1.length; i++) {
-    // var box1 = trgtBox1[i]
-    // box1.onclick = clickHandler
-// }
-// var box1 = parseInt(box1, 1)
-// console.log(1)
-// 
-// 
-// var trgtBox2 = document.querySelector("box-2")
-// function clickHandler(event) {
-    // console.log(event.target.textContent)
-// }
-// for (var i = 0; i < trgtBox2.length; i++) {
-    // var box2 = trgtBox2[i]
-    // box2.onclick = clickHandler
-// }
-// var box2 = parseInt(box2, 2)
-// console.log(2)
-// 
-// 
-// var trgtBox3 = document.querySelector("box-3")
-// function clickHandler(event) {
-    // console.log(event.target.textContent)
-// }
-// for (var i = 0; i < trgtBox3.length; i++) {
-    // var box3 = trgtBox3[i]
-    // box3.onclick = clickHandler
-// }
-// var box3 = parseInt(box3, 3)
-// console.log(3);
+
+
 
 // within each click event...
 // determine which box was clicked with 'this.textContent' or event.target.textContent
 // convert that value to a Number and store it to a variable
 
-        // var targetBox1 = document.getElementById("box-1").value
-        // var box1 = parseInt(box1, 1)
-        // console.log(1);
-        // 
-        // var targetBox2 = document.getElementById("box-2").value
-        // var box2 = parseInt(box2, 2)
-        // console.log(2);
-        // 
-        // var targetBox3 = document.getElementById("box-3").value
-        // var box3 = parseInt(box3, 3)
-        // console.log(3);
+// var clickBox = [
+    // targetBox1,
+    // targetBox2,
+    // targetBox3
+// ]
+
+
+var targetBox1 = document.getElementById(".box-1")
+function clickHandler(event) {
+    console.log(event.target.textContent)
+    var box1 = parseInt(box1, 1)
+}
+// var box1 = parseInt(box1, 1)
+// console.log(1);
+ 
+var targetBox2 = document.getElementById(".box-2")
+function clickHandler(event) {
+    console.log(event.target.textContent)
+    var box2 = parseInt(box2, 2)
+}
+// var box2 = parseInt(box2, 2)
+// console.log(2);
+ 
+var targetBox3 = document.getElementById(".box-3")
+function clickHandler(event) {
+    console.log(event.target.textContent)
+    var box3 = parseInt(box3, 3)
+}
+
+// console.log(3);
 
 
         // bxs.forEach(function(box) {
@@ -148,18 +175,17 @@ for (var i = 0; i < clickBox.length; i++) {
         // create a random number between 1-3 and store it to a variable
         // This number will represent the winning box
 
-winningBox = Math.floor((Math.random() * 3) + 1)
+var winningBox = Math.floor((Math.random() * 3) + 1)
 function logBox() {
     console.log(winningBox)
 }
 logBox()
-var winningBox
 
 // determine if the box clicked is equal to the random number
 // if the numbers match, display a winning message by changing the text content of the div#message element
 // if the numbers match, increment wins and display the win count in div#wins
 
-if (winningBox = box1) {
+if (winningBox = box) {
     document.getElementById("message").innerHTML = "Congratulations, you won!"
     trackWins += 1
 } else {
@@ -167,38 +193,56 @@ if (winningBox = box1) {
     trackLosses += 1
 }
 
-if (ranBox = box2) {
-    document.getElementById("message").innerHTML = "Congratulations, you won!"
-    trackWins += 1
-} else {
-    document.getElementById("message").innerHTML = losingMessages
-    [random_interger]
-    trackLosses += 1
-}
-
-if (ranBox = box3) {
-    document.getElementById("message").innerHTML = "Congratulations, you won!"
-    trackWins += 1
-} else {
-    document.getElementById("message").innerHTML = losingMessages
-    [random_interger]
-    trackLosses += 1
-}
+// if (ranBox = box2) {
+    // document.getElementById("message").innerHTML = "Congratulations, you won!"
+    // trackWins += 1
+// } else {
+    // document.getElementById("message").innerHTML = losingMessages
+    // [random_interger]
+    // trackLosses += 1
+// }
+// 
+// if (ranBox = box3) {
+    // document.getElementById("message").innerHTML = "Congratulations, you won!"
+    // trackWins += 1
+// } else {
+    // document.getElementById("message").innerHTML = losingMessages
+    // [random_interger]
+    // trackLosses += 1
+// }
 
 
 var winsP = document.getElementById("wins")
+winsP.textContent = "WINS:"
+document.body.appendChild(winsP)
+
+var lossesP = document.getElementById("losses")
+lossesP.textContent = "LOSSES:"
+document.body.appendChild(lossesP)
+
+
+
+var winsP2 = document.getElementById("winsP")
+document.createElement("winsP2")
+winsP2.textContent = "0"
+document.body.appendChild(winsP2)
+document.getElementById("winsP2").innerHTML = trackWins
+
+
 document.createElement("winsP")
 winsP.textContent = "WINS:"
-document.querySelector("#wins").appendChild(winsP)
-document.getElementById("winsP").appendChild(trgtkWins)
-document.getElementById("trgtWins").innerHTML = trackWins
+document.getElementById("winsP").appendChild(winsP.textContent)
+document.createElement("winsP2")
+winsP2.textContent = "0"
+document.getElementById("winsP2").innerHTML = trackWins
 
 
 var lossesP = document.getElementById("losses")
 document.createElement("lossesP")
 lossesP.textContent = "LOSSES:"
-document.querySelector("#losses").appendChild(lossesP)
-document.getElementById("lossesP").appendChild(trgtLosses)
+document.createElement("lossesP2")
+document.querySelector("lossesP").appendChild(lossesP2)
+document.getElementById("lossesP2").appendChild(trgtLosses)
 document.getElementById("trgtLosses").innerHTML = trackLosses
 
 
