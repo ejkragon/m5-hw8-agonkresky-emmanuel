@@ -193,6 +193,44 @@ if (winningBox = box) {
     trackLosses += 1
 }
 
+var winsText = document.getElementById("wins")
+winsText.innerHTML = "WINS:"
+
+var trackWins = document.createElement("winsP")
+trackWins.textContent = trackWins
+
+var lossesText = document.getElementById("losses")
+lossesText.innerHTML = "LOSSES:"
+
+var trackLosses = document.createElement("lossesP")
+trackLosses.textContent = trackLosses
+
+// 
+// 
+// 
+// document.createElement("winsP2")
+// winsP2.textContent = "WINS:"
+// document.body.appendChild(winsP2)
+// document.getElementById("winsP2").innerHTML = trackWins
+// 
+// 
+// document.createElement("winsP")
+// winsP.textContent = "WINS:"
+// document.getElementById("winsP").appendChild(winsP.textContent)
+// document.createElement("winsP2")
+// winsP2.textContent = "0"
+// document.getElementById("winsP2").innerHTML = trackWins
+// 
+// 
+// var lossesP = document.getElementById("losses")
+// document.createElement("lossesP")
+// lossesP.textContent = "LOSSES:"
+// document.createElement("lossesP2")
+// document.querySelector("lossesP").appendChild(lossesP2)
+// document.getElementById("lossesP2").appendChild(trgtLosses)
+// document.getElementById("trgtLosses").innerHTML = trackLosses
+
+
 // if (ranBox = box2) {
     // document.getElementById("message").innerHTML = "Congratulations, you won!"
     // trackWins += 1
@@ -212,44 +250,21 @@ if (winningBox = box) {
 // }
 
 
-var winsP = document.getElementById("wins")
-winsP.textContent = "WINS:"
-document.body.appendChild(winsP)
-
-var lossesP = document.getElementById("losses")
-lossesP.textContent = "LOSSES:"
-document.body.appendChild(lossesP)
-
-
-
-var winsP2 = document.getElementById("winsP")
-document.createElement("winsP2")
-winsP2.textContent = "0"
-document.body.appendChild(winsP2)
-document.getElementById("winsP2").innerHTML = trackWins
-
-
-document.createElement("winsP")
-winsP.textContent = "WINS:"
-document.getElementById("winsP").appendChild(winsP.textContent)
-document.createElement("winsP2")
-winsP2.textContent = "0"
-document.getElementById("winsP2").innerHTML = trackWins
-
-
-var lossesP = document.getElementById("losses")
-document.createElement("lossesP")
-lossesP.textContent = "LOSSES:"
-document.createElement("lossesP2")
-document.querySelector("lossesP").appendChild(lossesP2)
-document.getElementById("lossesP2").appendChild(trgtLosses)
-document.getElementById("trgtLosses").innerHTML = trackLosses
-
-
-
-
-
-
+// var trackWins = document.getElementById("wins")
+// document.createElement("trackWins")
+// trackWins.textContent = trackWins
+// document.body.appendChild("trackWins")
+// 
+// var trackWins = document.getElementById("winsP")
+// console.log
+// document.body.appendChild("winsP")
+// 
+// var lossesP = document.getElementById("losses")
+// lossesP.textContent = "LOSSES:"
+// document.body.appendChild(lossesP)
+// 
+// var trackLosses = document.getElementById("lossesP")
+// document.body.appendChild(trackLosses)
 
 
 // if the numbers don't match, change the div#message element's text to a random losing message from the array above
