@@ -26,8 +26,7 @@ function clickHandler(event) {
 }
 
 for (var i = 0; i < clickBox.length; i++) {
-    var box = clickBox[i]
-    box.onclick = clickHandler 
+    clickBox[i].onclick = clickHandler
 }
 
         // var trgtBox1 = document.querySelector(".box-1")
@@ -102,11 +101,11 @@ for (var i = 0; i < clickBox.length; i++) {
         // var box3 = parseInt(box3, 3)
         // console.log(3);
 
-// var trgtBox = document.querySelector(".box-1")
-// function clickHandler(event) {
-    // console.log(event.target.textContent)
-    // var trgtBox = parseInt(1)
-// }
+        // var trgtBox = document.querySelector(".      box-1")
+        // function clickHandler(event) {
+            // console.log(event.target.textContent)
+            // var trgtBox = parseInt(1)
+        // }
 
 
 
@@ -114,17 +113,25 @@ for (var i = 0; i < clickBox.length; i++) {
 // determine which box was clicked with 'this.textContent' or event.target.textContent
 // convert that value to a Number and store it to a variable
 
-// var clickBox = [
-    // targetBox1,
-    // targetBox2,
-    // targetBox3
-// ]
+        // var clickBox = [
+            // targetBox1,
+            // targetBox2,
+            // targetBox3
+        // ]
 
+function clickHandler(event) {
+    console.log(event.target.textContent)
+    var clickBox = [
+        box1 = parseInt("1"),
+        box2 = parseInt("2"),
+        box3 = parseInt("3")
+    ]
+}
 
 var targetBox1 = document.getElementById(".box-1")
 function clickHandler(event) {
     console.log(event.target.textContent)
-    var box1 = parseInt(box1, 1)
+    var box1 = parseInt("1")
 }
 // var box1 = parseInt(box1, 1)
 // console.log(1);
@@ -132,7 +139,7 @@ function clickHandler(event) {
 var targetBox2 = document.getElementById(".box-2")
 function clickHandler(event) {
     console.log(event.target.textContent)
-    var box2 = parseInt(box2, 2)
+    var box2 = parseInt("2")
 }
 // var box2 = parseInt(box2, 2)
 // console.log(2);
@@ -140,7 +147,7 @@ function clickHandler(event) {
 var targetBox3 = document.getElementById(".box-3")
 function clickHandler(event) {
     console.log(event.target.textContent)
-    var box3 = parseInt(box3, 3)
+    var box3 = parseInt("3")
 }
 
 // console.log(3);
@@ -172,20 +179,21 @@ function clickHandler(event) {
         // }
 
 
-        // create a random number between 1-3 and store it to a variable
-        // This number will represent the winning box
-
-var winningBox = Math.floor((Math.random() * 3) + 1)
-function logBox() {
-    console.log(winningBox)
-}
-logBox()
+// create a random number between 1-3 and store it to a variable
+// This number will represent the winning box
+ 
+var randomNumber = Math.floor((Math.random() * 3) + 1)
+// function logBox() {
+var winningBox = randomNumber
+console.log(winningBox)
+// }
+// logBox()
 
 // determine if the box clicked is equal to the random number
 // if the numbers match, display a winning message by changing the text content of the div#message element
 // if the numbers match, increment wins and display the win count in div#wins
 
-if (winningBox = box) {
+if (winningBox = clickBox) {
     document.getElementById("message").innerHTML = "Congratulations, you won!"
     trackWins += 1
 } else {
