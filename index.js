@@ -21,9 +21,9 @@ var clickBox = document.querySelectorAll(".boxes > .row > div.box")
 // from Lee's slack msg:
 // // [line above] to target all of your boxes to then loop through and attach handlers
 
-function clickHandler(event) {
-    console.log(event.target.textContent)
-}
+// function clickHandler(event) {
+    // console.log(event.target.textContent)
+// }
 
 for (var i = 0; i < clickBox.length; i++) {
     clickBox[i].onclick = clickHandler
@@ -119,14 +119,14 @@ for (var i = 0; i < clickBox.length; i++) {
             // targetBox3
         // ]
 
-function clickHandler(event) {
-    console.log(event.target.textContent)
-    var clickBox = [
-        box1 = parseInt("1"),
-        box2 = parseInt("2"),
-        box3 = parseInt("3")
-    ]
-}
+        // function clickHandler(event) {
+            // console.log(event.target.textContent)
+            // var clickBox = [
+                // box1 = parseInt("1"),
+                // box2 = parseInt("2"),
+                // box3 = parseInt("3")
+            // ]
+        // }
 
 var targetBox1 = document.getElementById(".box-1")
 function clickHandler(event) {
@@ -182,22 +182,53 @@ function clickHandler(event) {
 // create a random number between 1-3 and store it to a variable
 // This number will represent the winning box
  
-var randomNumber = Math.floor((Math.random() * 3) + 1)
-// function logBox() {
-var winningBox = randomNumber
-console.log(winningBox)
-// }
-// logBox()
+var winningBox = Math.floor((Math.random() * 3) + 1); 
+var randomNumber
+var winningBox = randomNumber 
+    
+
+
+
+
+ 
+
+
+        // var randomNumber = Math.floor((Math.random       () * 3) + 1)
+        // function logBox() {
+        // var winningBox = randomNumber
+        // console.log(winningBox)
+        // }
+        // logBox()
 
 // determine if the box clicked is equal to the random number
 // if the numbers match, display a winning message by changing the text content of the div#message element
 // if the numbers match, increment wins and display the win count in div#wins
 
-if (winningBox = clickBox) {
+if (winningBox = targetBox1) {
     document.getElementById("message").innerHTML = "Congratulations, you won!"
     trackWins += 1
 } else {
-    document.getElementById("message").innerHTML = losingMessages[random_interger]
+    document.getElementById("message").innerHTML = losingMessages[0]
+    trackLosses += 1
+}
+
+if (winningBox = targetBox2) {
+    document.getElementById("message").
+        innerHTML = "Congratulations, you won!"
+    trackWins += 1
+} else {
+    document.getElementById("message").
+        innerHTML = losingMessages[1]
+    trackLosses += 1
+}
+
+if (winningBox = targetBox3) {
+    document.getElementById("message").
+        innerHTML = "Congratulations, you won!"
+    trackWins += 1
+} else {
+    document.getElementById("message").
+        innerHTML = losingMessages[2]
     trackLosses += 1
 }
 
