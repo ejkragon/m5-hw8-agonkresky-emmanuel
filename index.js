@@ -21,14 +21,19 @@ var clickBox = document.querySelectorAll(".boxes > .row > div.box")
 // from Lee's slack msg:
 // // [line above] to target all of your boxes to then loop through and attach handlers
 
-// function clickHandler(event) {
-    // console.log(event.target.textContent)
-// }
-
-for (var i = 0; i < clickBox.length; i++) {
-    clickBox[i].onclick = clickHandler
+// clickBox.addEventListener("click")
+function clickHandler(event) {
+    console.log(event.target.textContent)
 }
 
+for (var i = 0; i < clickBox.length; i++) {
+    var box = clickBox[i]
+    clickBox.onclick = clickHandler
+}
+
+        // for (var i = 0; i < clickBox.length; i++) {
+        // clickBox[i].onclick = clickHandler
+        // }
         // var trgtBox1 = document.querySelector(".box-1")
         // 
         // function clickHandler(event) {
