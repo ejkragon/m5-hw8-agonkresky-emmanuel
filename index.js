@@ -24,10 +24,7 @@ var clickBox = document.querySelectorAll(".boxes > .row > div.box")
     // clickBox.addEventListener("click")
 function clickHandler(event) {
     console.log(event.target.textContent)
-    var boxParse = clickBox.textContent
-    var boxParse = parseInt(clickBox)
-    clickBox.textContent = parseInt(clickBox)
-    boxParse = boxParse
+    var clickBox = parseInt(box)
 }      
 
 for (var i = 0; i < clickBox.length; i++) {
@@ -45,15 +42,43 @@ for (var i = 0; i < clickBox.length; i++) {
 
 // create a random number between 1-3 and store it to a variable
 // This number will represent the winning box
- 
-var winningBox = Math.floor((Math.random() * 3) + 1); 
+
+var winningBox = Math.floor((Math.random() * 3) + 1);
+console.log(winningBox)
+
+
+// var boxValue = event.target.textContent
+// (box)
+// var clickBox = box
+// var boxChosen = parseInt(box)
+// boxChosen = clickBox
+// // var randomNumber = Math.floor((Math.random() * 3) + 1)
+// function logBox() {
+// var winningBox = randomNumber
+// console.log(winningBox)
+// }
+// logBox()
+
+// var winningBox = function() {
+    // Math.floor((Math.random() * 3) + 1) 
+    // console.log(winningBox)
+// var randomBox = winningBox
+// }
+
+var x = clickBox
+var y = winningBox
+var product = parseInt(x) * parseInt(y)
+console.log(product)
+
+
+
 
 
 // determine if the box clicked is equal to the random number
 // if the numbers match, display a winning message by changing the text content of the div#message element
 // if the numbers match, increment wins and display the win count in div#wins
 
-if (boxParse = winningBox) {
+if (x = y) {
     document.getElementById("message").innerHTML = "Congratulations, you won!"
     trackWins += 1
 } else {
