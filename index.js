@@ -21,15 +21,30 @@ var clickBox = document.querySelectorAll(".boxes > .row > div.box")
 // from Lee's slack msg:
 // // [line above] to target all of your boxes to then loop through and attach handlers
 
-    // clickBox.addEventListener("click")
-function clickHandler(event) {
-    console.log(event.target.textContent)
-    var clickBox = parseInt(box)
-}      
+// clickBox.addEventListener("click")
+function boxclickHandler(event) {
+    var clickBox = parseInt(box.textContent)
+    // var x = clickBox
+    console.log(clickBox)
+    var winningBox = Math.floor((Math.random() * 3) + 1);
+    // var winningBox = parseInt(winningBox)
+    console.log(winningBox)
+    if (clickBox === winningBox) {
+        console.log('equal')
+        document.getElementById("message").innerHTML = "Congratulations,you won!"
+        trackWins += 1
+        document.getElementById("wins").innerHTML = "WINS: " + trackWins
+    } else {
+        console.log('not equal')
+        document.getElementById("message").innerHTML = losingMessages[Math.floor((Math.random() * 3))]
+        trackLosses += 1
+        document.getElementById("losses").innerHTML = "LOSSES: " + trackLosses
+    }
+}
 
 for (var i = 0; i < clickBox.length; i++) {
     var box = clickBox[i]
-    box.onclick = clickHandler
+    box.onclick = boxclickHandler
 }
 
 
@@ -43,8 +58,17 @@ for (var i = 0; i < clickBox.length; i++) {
 // create a random number between 1-3 and store it to a variable
 // This number will represent the winning box
 
-var winningBox = Math.floor((Math.random() * 3) + 1);
-console.log(winningBox)
+
+
+// determine if the box clicked is equal to the random number
+// if the numbers match, display a winning message by changing the text content of the div#message element
+// if the numbers match, increment wins and display the win count in div#wins
+ 
+
+
+
+
+
 
 
 // var boxValue = event.target.textContent
@@ -65,40 +89,38 @@ console.log(winningBox)
 // var randomBox = winningBox
 // }
 
-var x = clickBox
-var y = winningBox
-var product = parseInt(x) * parseInt(y)
-console.log(product)
 
 
 
 
 
-// determine if the box clicked is equal to the random number
-// if the numbers match, display a winning message by changing the text content of the div#message element
-// if the numbers match, increment wins and display the win count in div#wins
-
-if (x = y) {
-    document.getElementById("message").innerHTML = "Congratulations, you won!"
-    trackWins += 1
-} else {
-    document.getElementById("message").innerHTML = losingMessages[0]
-    trackLosses += 1
-}
 
 
-var winsText = document.getElementById("wins")
-winsText.innerHTML = "WINS:"
 
-var trackWins = document.createElement("winsP")
-trackWins.textContent = trackWins
 
-var lossesText = document.getElementById("losses")
-lossesText.innerHTML = "LOSSES:"
 
-var trackLosses = document.createElement("lossesP")
-trackLosses.textContent = trackLosses
 
+// if (clickBox === winningBox) {
+    // // document.getElementById("message").innerHTML = "Congratulations, you won!"
+    // trackWins += 1
+// } else {
+    // // document.getElementById("message").innerHTML = losingMessages[0]
+    // trackLosses += 1
+// }
+
+
+// 
+// 
+// 
+// // var trackWins = document.createElement("winsP")
+// trackWins.textContent = trackWins
+// 
+// // var lossesText = document.getElementById("losses")
+// lossesText.innerHTML = "LOSSES:"
+// 
+// // var trackLosses = document.createElement("lossesP")
+// trackLosses.textContent = trackLosses
+// 
 // 
 // 
 // 
@@ -358,3 +380,10 @@ trackLosses.textContent = trackLosses
         // innerHTML = losingMessages[2]
     // trackLosses += 1
 // }
+
+
+    // var winningBox = Math.floor((Math.random()* 3) + 1);
+// var winningBox = parseInt(winningBox)
+// var y = winningBox
+// console.log(winningBox)
+// 
