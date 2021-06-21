@@ -2,6 +2,17 @@
 
 ![laptop mockup of the box challenge assignment](./mockups/laptop-1024x768.png)
 
+## Resources and Notes
+
+Read up on terminology from first semester. Duckett, J., Ruppert, G., & Moore, J. (2014). Javascript & JQuery: Interactive front-end Web development. Indianapolis, Ind: John Wiley & Sons.
+
+Used googled countless times and for the most part stayed within the confines of W3 Schools, although on occasion, I would check MDN and Stack Overflow.
+
+I checked-in in with my former teammates throughout the assignment. Abigail helped me understand why everything needed to be moved under function (sorry, Lee, I know you tried to explain it to me, but I still struggled with it).
+
+A blue rubber ducky.
+
+
 ## Background
 
 After completing the pizza ordering site, your boss has decided that you are ready for a bigger assignment.
